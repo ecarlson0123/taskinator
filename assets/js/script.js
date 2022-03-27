@@ -215,12 +215,18 @@ for (var i = 0; i < tasks.length; i++) {
   }
 
   saveTasks();
-  };
+};
 
-  var saveTasks = function() {
+var saveTasks = function() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-}
+};
 
+/* var loadTasks= function(){
+tasks=localStorage.getItem("tasks");
+console.log(tasks);
+}; */
+
+loadTasks();
 formEl.addEventListener("submit", taskFormHandler);
 pageContentEl.addEventListener("click", taskButtonHandler);
 pageContentEl.addEventListener("change", taskStatusChangeHandler);
